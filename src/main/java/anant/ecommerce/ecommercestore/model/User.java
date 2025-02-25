@@ -20,7 +20,7 @@ public class User {
     private String email;
 
     @NotBlank(message = "Password is required")
-    private String password;
+    private String password;  // No hashing, stores plain text (not recommended for production)
 
     // Default Constructor
     public User() {}
@@ -63,6 +63,6 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = password;  // No hashing, just storing plain text
     }
 }
